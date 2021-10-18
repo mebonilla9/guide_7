@@ -1,0 +1,24 @@
+{
+  "name": "guide_7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "0g": "^0.0.6",
+    "firebase-tools": "^9.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mebonilla9/guide_7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mebonilla9/guide_7/issues"
+  },
+  "homepage": "https://github.com/mebonilla9/guide_7#readme"
+}
