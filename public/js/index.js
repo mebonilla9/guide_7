@@ -1,8 +1,9 @@
-import * as THREE from "/public/build/three.module.js";
-import { OrbitControls } from "/public/jsm/controls/OrbitControls.js";
+import * as THREE from "/build/three.module.js";
+import { OrbitControls } from "/jsm/controls/OrbitControls.js";
 
 let that;
 let index = {
+  // Lista de atributos de la escena
   container: undefined,
   sceneWidth: undefined,
   sceneHeight: undefined,
@@ -14,11 +15,13 @@ let index = {
   ico: undefined,
   torus: undefined,
   cone: undefined,
+  // Funcion de inicializacion
   init: function () {
     that = this;
     that.createScene();
     that.update();
   },
+  // Metodo base para inicializar la escena
   createScene: function () {
     // inicializar las variables globales
     that.sceneWidth = window.innerWidth;
@@ -135,17 +138,22 @@ let index = {
     that.render();
   },
   render: function () {
+    // Actualizar los valores del control de camara
     that.controls.update();
+    // Metodos que generan la rotacion de los objetos primitivos
     that.rotatePolygon(that.cube);
     that.rotatePolygon(that.ico);
     that.rotatePolygon(that.torus);
     that.rotatePolygon(that.cone);
+    // Renderizar la escena
     that.renderer.render(that.scene, that.camera);
   },
+  // Metodo para rotar un objeto primitivo enviado por referencia.
   rotatePolygon:function(object){
     object.rotation.y += 0.025;
     object.rotation.x += 0.0025;
     object.rotation.z += 0.00025;
   }
 };
+// Lanzar el metodo de inicializacion
 index.init();
